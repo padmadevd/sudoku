@@ -1,0 +1,6 @@
+linux:-
+g++ -o bin/sudoku.out sudoku.cpp customWidgets.cpp sudokuCtrl/drawingUtils.cpp sudokuCtrl/generator.cpp sudokuCtrl/solver.cpp sudokuCtrl/sudokuGrid.cpp `wx-config --cppflags --libs` -D NDEBUG -lwx_gtk3u_unofficial_stc-3.2 `pkg-config --cflags --libs gtk+-3.0`
+
+windows:-
+
+g++ -o bin/sudoku.exe sudoku.cpp customWidgets.cpp sudokuCtrl/drawingUtils.cpp sudokuCtrl/generator.cpp sudokuCtrl/solver.cpp sudokuCtrl/sudokuGrid.cpp -D__WXMSW__ -DUSING_DLL -DNDEBUG -IC:\wx3.2-dev\include -IC:\wx3.2-dev\lib\gcc1030TDM_x64_dll\mswu -LC:\wx3.2-dev\lib -mwindows -lwxmsw32u_gcc_custom -lwxtiff -lwxpng -lwxzlib -lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -lole32 -loleaut32 -luuid -lcomctl32 -lwsock32 -lodbc32 -lshlwapi -lversion -loleacc -luxtheme
